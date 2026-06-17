@@ -1,0 +1,14 @@
+{
+    "image": "qopsimages/qops:latest",
+    "containerEnv": {
+        "QOPS_LICENSE_KEY": "${localEnv:QOPS_LICENSE_KEY}"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dvstseood.qlik-ext"
+            ]
+        }
+    },
+    "postCreateCommand": "curl -sL https://raw.githubusercontent.com/qops-hub/codespace-scripts/main/post-create.sh | bash"
+}
